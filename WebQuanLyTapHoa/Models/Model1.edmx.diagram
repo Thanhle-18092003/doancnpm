@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="68ce5be76b6840a79320b09c97c40d5a" Name="Diagram1">
+        <EntityTypeShape EntityType="QuanLyTapHoaModel.ChiTietDonHang" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyTapHoaModel.DonHang" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyTapHoaModel.LoaiSP" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyTapHoaModel.NguoiBan" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyTapHoaModel.NhapHang" Width="1.5" PointX="5.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyTapHoaModel.NhaSanXuat" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyTapHoaModel.SanPham" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <AssociationConnector Association="QuanLyTapHoaModel.FK_CTDHMaDH" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyTapHoaModel.FK_CTDHMaSP" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyTapHoaModel.FK_DonHangMaNB" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyTapHoaModel.FK_SanPhamML" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyTapHoaModel.FK_NhapHangMaSP" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyTapHoaModel.FK_SanPhamMNSX" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

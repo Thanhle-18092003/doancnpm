@@ -1,0 +1,37 @@
+﻿@model IEnumerable<WebQuanLyTapHoa.Models.NhaSanXuat>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<div class="headerOfQuanLy">
+    <h2 class="headerTextOfQuanLy">Quản lý Danh Mục Nhà Sản Xuất</h2>
+
+    <p class="createNew">
+        @Html.ActionLink("Thêm Mới", "Create", "NhaSanXuats", null, new { @class = "createNew btn btn-light" })
+    </p>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenNSX)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenNSX)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaNSX }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaNSX }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaNSX })
+        </td>
+    </tr>
+}
+
+</table>

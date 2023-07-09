@@ -1,0 +1,82 @@
+﻿@model IEnumerable<WebQuanLyTapHoa.Models.SanPham>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<div class="headerOfQuanLy">
+    <h2 class="headerTextOfQuanLy">Quản lý Sản Phẩm</h2>
+
+    <p class="createNew">
+        @Html.ActionLink("Thêm Mới", "Create", "SanPhams", null, new { @class = "createNew btn btn-light" })
+    </p>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.TenSP)*@
+            <p>Tên Sản Phẩm</p>
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.HinhSP)*@
+            <p>Hình ảnh
+            </p>
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.MoTaSP)*@
+            Mô tả
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.GiaSP)*@
+            <p>Giá Sản phẩm</p>
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.SoLuongSP)*@
+            <p>Số lượng</p>
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.LoaiSP.TenLoai)*@
+            <p>Loại Sản Phẩm</p>
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.NhaSanXuat.TenNSX)*@
+            <p>Nhà sản xuất</p>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenSP)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HinhSP)*@            
+            <img src="~/Content/images/@item.HinhSP" width="60" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MoTaSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuongSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoaiSP.TenLoai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhaSanXuat.TenNSX)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaSP }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaSP }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaSP })
+        </td>
+    </tr>
+}
+
+</table>
